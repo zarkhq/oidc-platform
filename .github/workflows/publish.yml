@@ -2,6 +2,9 @@ name: Publish
 
 on: 
   workflow_dispatch:
+    branches:
+      - of/build-zark-fork
+      - master
   push:
       branches: 
       - of/build-zark-fork
