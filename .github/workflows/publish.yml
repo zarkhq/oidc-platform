@@ -17,8 +17,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build the hello-docker Docker image
+      - name: Build the Zark OIDC Docker image
         run: |
-          docker build . --tag ghcr.io/zarkhq/oidc-platform:latest
+          docker build api/. --tag ghcr.io/zarkhq/oidc-platform:latest
           docker run ghcr.io/zarkhq/oidc-platform:latest
           docker push ghcr.io/zarkhq/oidc-platform:latest
